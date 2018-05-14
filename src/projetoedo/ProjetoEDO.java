@@ -55,7 +55,7 @@ public class ProjetoEDO {
         System.out.println("---------------------------------------------");
         System.out.println("------ VALORES PARA REGRA DE TRAPÉZIO ------");
         
-        float h = vetX[0] - vetX[1];
+        float h = vetX[1] - vetX[0];
         float soma = 0.0f;
         
         for(int i=0;i<N;i++){
