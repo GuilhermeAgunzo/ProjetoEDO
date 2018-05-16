@@ -19,7 +19,7 @@ public class RungeKutta4 {
     
     // g(x)
     public float dvdx (float x, float u, float v){
-        return (float) (Math.pow(v, 2) + (u * Math.pow(x,2)));
+        return (float) (Math.pow(v, 2) + (u * (Math.pow(x,2))));
     }
     
     // Método de Runge Kutta de 4ª ordem
