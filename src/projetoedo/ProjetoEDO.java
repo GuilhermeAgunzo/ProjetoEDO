@@ -18,7 +18,6 @@ public class ProjetoEDO {
     
     // u' = v, com u(0) = 1
     // v' = v^2 + u*x^2, com v(0) = 0
-    
     public static void main(String[] args) {
         
         float[] vetX = new float[21];
@@ -51,7 +50,7 @@ public class ProjetoEDO {
             System.out.println(soma += (2*vetU[i]));
             
         }
-        soma -= (vetU[0] - vetU[20]);
+        soma -= (vetU[0] + vetU[20]);
             
         float resultado = (h/2) * soma;
         System.out.println("--------------------------------------------");
