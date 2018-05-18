@@ -85,8 +85,7 @@ public class ProjetoEDO {
         System.out.println("---------------------------------------------");
         System.out.println("------ VALORES PARA REGRA DE TRAPÉZIO ------");
         
-        // Definição do passo h para a regra de trapézios h = x1 - x0
-        
+        // Regra de trapézios
         float soma = 0.0f;
         
         for(int i=0;i<=N;i++){
