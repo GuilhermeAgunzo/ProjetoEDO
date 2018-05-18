@@ -86,16 +86,14 @@ public class ProjetoEDO {
         System.out.println("------ VALORES PARA REGRA DE TRAPÉZIO ------");
         
         // Definição do passo h para a regra de trapézios h = x1 - x0
-        float h = vetX[1] - vetX[0];
+        
         float soma = 0.0f;
         
         for(int i=0;i<=N;i++){
-            System.out.println(soma += (2*vetU[i]));
-            
+            soma += vetU[i];
         }
-        soma += (vetU[10] + vetU[20]);
             
-        float resultado = (h/2) * soma;
+        float resultado = (H/2) * (vetU[0] + (2*soma) + vetU[20]);
         System.out.println("--------------------------------------------");
         System.out.println("Resultado final: " + resultado);
         System.out.println("--------------------------------------------");
