@@ -32,14 +32,6 @@ public class ProjetoEDO {
         vetU[0] = result.getU();
         vetV[0] = result.getV();
         
-        for(int i=0;i<10;i++){
-            vetX[i+1] = (vetX[i] - 0.1f);
-        }
-        
-        for(int i=1;i<=10;i++){
-            vetX[i+10] = vetX[i] * -1;
-        }
-        
         for(int i=1;i<=N/2;i++){
             
             result = rK.RungeKutta4(result.getX(),result.getU(),result.getV(),H);
