@@ -90,10 +90,12 @@ public class ProjetoEDO {
         float soma = 0.0f;
         
         for(int i=0;i<=N;i++){
-            soma += vetU[i];
+            soma += 2*vetU[i];
         }
-            
-        float resultado = (H/2) * (vetU[0] + (2*soma) + vetU[20]);
+        
+        soma = soma - vetU[0] - vetU[20];
+        
+        float resultado = (H/2) * soma;
         System.out.println("--------------------------------------------");
         System.out.println("Resultado final: " + resultado);
         System.out.println("--------------------------------------------");
