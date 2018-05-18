@@ -56,30 +56,31 @@ public class ProjetoEDO {
             
         }
         
-        // Imprimir valores na ordem do intervalo
+        // Organizar vetores
         
-        System.out.println("X: " + vetX[20] + ", U: " + vetU[20] + ", V: " + vetV[20]);
-        System.out.println("X: " + vetX[19] + ", U: " + vetU[19] + ", V: " + vetV[19]);
-        System.out.println("X: " + vetX[18] + ", U: " + vetU[18] + ", V: " + vetV[18]);
-        System.out.println("X: " + vetX[17] + ", U: " + vetU[17] + ", V: " + vetV[17]);
-        System.out.println("X: " + vetX[16] + ", U: " + vetU[16] + ", V: " + vetV[16]);
-        System.out.println("X: " + vetX[15] + ", U: " + vetU[15] + ", V: " + vetV[15]);
-        System.out.println("X: " + vetX[14] + ", U: " + vetU[14] + ", V: " + vetV[14]);
-        System.out.println("X: " + vetX[13] + ", U: " + vetU[13] + ", V: " + vetV[13]);
-        System.out.println("X: " + vetX[12] + ", U: " + vetU[12] + ", V: " + vetV[12]);
-        System.out.println("X: " + vetX[11] + ", U: " + vetU[11] + ", V: " + vetV[11]);
-        System.out.println("X: " + vetX[0] + ", U: " + vetU[0] + ", V: " + vetV[0]);
-        System.out.println("X: " + vetX[1] + ", U: " + vetU[1] + ", V: " + vetV[1]);
-        System.out.println("X: " + vetX[2] + ", U: " + vetU[2] + ", V: " + vetV[2]);
-        System.out.println("X: " + vetX[3] + ", U: " + vetU[3] + ", V: " + vetV[3]);
-        System.out.println("X: " + vetX[4] + ", U: " + vetU[4] + ", V: " + vetV[4]);
-        System.out.println("X: " + vetX[5] + ", U: " + vetU[5] + ", V: " + vetV[5]);
-        System.out.println("X: " + vetX[6] + ", U: " + vetU[6] + ", V: " + vetV[6]);
-        System.out.println("X: " + vetX[7] + ", U: " + vetU[7] + ", V: " + vetV[7]);
-        System.out.println("X: " + vetX[8] + ", U: " + vetU[8] + ", V: " + vetV[8]);
-        System.out.println("X: " + vetX[9] + ", U: " + vetU[9] + ", V: " + vetV[9]);
-        System.out.println("X: " + vetX[10] + ", U: " + vetU[10] + ", V: " + vetV[10]);
+        float aux;
         
+        for(int i = 0; i<=N; i++){
+		for(int j = 0; j<=N-1; j++){
+			if(vetX[j] > vetX[j + 1]){
+				aux = vetX[j];
+				vetX[j] = vetX[j+1];
+				vetX[j+1] = aux;
+                                
+                                aux = vetU[j];
+				vetU[j] = vetU[j+1];
+				vetU[j+1] = aux;
+                                
+                                aux = vetV[j];
+				vetV[j] = vetV[j+1];
+				vetV[j+1] = aux;
+			}
+		}
+	}
+        
+        for(int i = 0; i<=N; i++){
+		System.out.println("X: " + vetX[i] + ", U: " + vetU[i] + ", V: " + vetV[i]);
+	} 
         
         System.out.println("---------------------------------------------");
         System.out.println("------ VALORES PARA REGRA DE TRAPÉZIO ------");
@@ -92,7 +93,7 @@ public class ProjetoEDO {
             System.out.println(soma += (2*vetU[i]));
             
         }
-        soma -= (vetU[0] + vetU[20]);
+        soma += (vetU[10] + vetU[20]);
             
         float resultado = (h/2) * soma;
         System.out.println("--------------------------------------------");
